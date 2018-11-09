@@ -42,8 +42,14 @@ class StartLayout : RelativeLayout {
      */
     var POIN_X = DisplayUtil.getScreenWidth() / 2
     var POIN_Y = DisplayUtil.getScreenHeight() / 2
-    private val mLocationsss = arrayOf(intArrayOf(POIN_X - resources.getDimensionPixelSize(R.dimen.sm_px_20), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) - resources.getDimensionPixelSize(R.dimen.sm_px_190)), intArrayOf(POIN_X + resources.getDimensionPixelSize(R.dimen.sm_px_90), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) - resources.getDimensionPixelSize(R.dimen.sm_px_130)), intArrayOf(POIN_X + resources.getDimensionPixelSize(R.dimen.sm_px_70), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) - resources.getDimensionPixelSize(R.dimen.sm_px_40)), intArrayOf(POIN_X, DisplayUtil.getScreenHeight() / 2 - resources.getDimensionPixelSize(R.dimen.sm_px_40)),
-            intArrayOf(POIN_X - resources.getDimensionPixelSize(R.dimen.sm_px_20), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) + resources.getDimensionPixelSize(R.dimen.sm_px_70)), intArrayOf(POIN_X - resources.getDimensionPixelSize(R.dimen.sm_px_40), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) + resources.getDimensionPixelSize(R.dimen.sm_px_140)), intArrayOf(POIN_X - resources.getDimensionPixelSize(R.dimen.sm_px_70), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) + resources.getDimensionPixelSize(R.dimen.sm_px_250)))
+    private val mLocationsss = arrayOf(
+            intArrayOf(POIN_X - resources.getDimensionPixelSize(R.dimen.sm_px_50), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) - resources.getDimensionPixelSize(R.dimen.sm_px_150)),
+            intArrayOf(POIN_X + resources.getDimensionPixelSize(R.dimen.sm_px_30), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) - resources.getDimensionPixelSize(R.dimen.sm_px_160)),
+            intArrayOf(POIN_X + resources.getDimensionPixelSize(R.dimen.sm_px_60),POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) - resources.getDimensionPixelSize(R.dimen.sm_px_60)),
+            intArrayOf(POIN_X, POIN_Y- resources.getDimensionPixelSize(R.dimen.sm_px_30)),
+            intArrayOf(POIN_X - resources.getDimensionPixelSize(R.dimen.sm_px_15), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) + resources.getDimensionPixelSize(R.dimen.sm_px_80)),
+            intArrayOf(POIN_X - resources.getDimensionPixelSize(R.dimen.sm_px_30), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) + resources.getDimensionPixelSize(R.dimen.sm_px_160)),
+            intArrayOf(POIN_X +resources.getDimensionPixelSize(R.dimen.sm_px_50), POIN_Y - resources.getDimensionPixelSize(R.dimen.sm_px_30) + resources.getDimensionPixelSize(R.dimen.sm_px_245)))
     private var mMatrix: Matrix? = null
     private var mPathMeasure: PathMeasure? = null
     private var mPos: FloatArray? = null
@@ -228,7 +234,13 @@ class StartLayout : RelativeLayout {
             canvas.drawCircle(index[0].toFloat(), index[1].toFloat(), 4f, paint!!)
             //            canvas.drawBitmap(mBitmap, index[0] - mBitmap.getWidth() / 2-DX, index[1] - mBitmap.getHeight() / 2-DX, paint);
         }
-        val pts = floatArrayOf(mLocationsss[0][0].toFloat(), mLocationsss[0][1].toFloat(), mLocationsss[1][0].toFloat(), mLocationsss[1][1].toFloat(), mLocationsss[1][0].toFloat(), mLocationsss[1][1].toFloat(), mLocationsss[2][0].toFloat(), mLocationsss[2][1].toFloat(), mLocationsss[2][0].toFloat(), mLocationsss[2][1].toFloat(), mLocationsss[3][0].toFloat(), mLocationsss[3][1].toFloat(), mLocationsss[3][0].toFloat(), mLocationsss[3][1].toFloat(), mLocationsss[4][0].toFloat(), mLocationsss[4][1].toFloat(), mLocationsss[4][0].toFloat(), mLocationsss[4][1].toFloat(), mLocationsss[5][0].toFloat(), mLocationsss[5][1].toFloat(), mLocationsss[5][0].toFloat(), mLocationsss[5][1].toFloat(), mLocationsss[6][0].toFloat(), mLocationsss[6][1].toFloat(), mLocationsss[6][0].toFloat(), mLocationsss[6][1].toFloat(), mLocationsss[0][0].toFloat(), mLocationsss[0][1].toFloat())
+        val pts = floatArrayOf(mLocationsss[0][0].toFloat(), mLocationsss[0][1].toFloat(),  mLocationsss[1][0].toFloat(), mLocationsss[1][1].toFloat(),
+                mLocationsss[1][0].toFloat(), mLocationsss[1][1].toFloat(), mLocationsss[2][0].toFloat(), mLocationsss[2][1].toFloat(),
+                mLocationsss[2][0].toFloat(), mLocationsss[2][1].toFloat(),mLocationsss[3][0].toFloat(), mLocationsss[3][1].toFloat(),
+                mLocationsss[3][0].toFloat(), mLocationsss[3][1].toFloat(), mLocationsss[4][0].toFloat(), mLocationsss[4][1].toFloat(),
+                mLocationsss[4][0].toFloat(), mLocationsss[4][1].toFloat(), mLocationsss[5][0].toFloat(), mLocationsss[5][1].toFloat(),
+                mLocationsss[5][0].toFloat(), mLocationsss[5][1].toFloat(), mLocationsss[6][0].toFloat(), mLocationsss[6][1].toFloat(),
+                mLocationsss[0][0].toFloat(), mLocationsss[0][1].toFloat(), mLocationsss[6][0].toFloat(), mLocationsss[6][1].toFloat())
         canvas.drawLines(pts, paint!!)
     }
 
